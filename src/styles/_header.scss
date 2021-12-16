@@ -1,0 +1,30 @@
+.header{
+    height: $headerHeight;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	right: 0;
+	left: 0;
+	// z-index: 2;
+	background: $color-white;
+	display: inline-flex;
+	background-color: $color-white;
+	border-bottom: 1px solid $color-lightgrey;
+}
+
+.icon {
+	display: inline-block;
+	padding: 10px 30px 10px 30px;
+    &:after{
+        position: absolute;
+        top: calc(50% - 19px);
+        right: -30px;
+        background: $color-lightgrey;
+        width: 1px;
+        height: 38px;
+    }
+}
+
+.header-title{
+    font-family: 'adidas-bold';
+}

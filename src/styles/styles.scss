@@ -1,8 +1,30 @@
-#select{
-    width: 100px;
+@import 'mixins';
+@import 'vars';
+@import 'font';
+
+@import 'card';
+@import 'header';
+@import 'select';
+
+
+body{
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #root{
     margin-top: 10px;
     margin-left: 10px;
 }
+
+h1,h2,h3,h4,h5,h6,p{
+    font-family: $font-family;
+}
+
+.title{
+    margin-top: 100px;
+    font-size: 20pt;
+}
+
+
+
