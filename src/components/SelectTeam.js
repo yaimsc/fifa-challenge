@@ -32,7 +32,9 @@ const SelectTeam = () => {
     console.log(teams);
 
     return(
-        <div className='div-select'>
+        <>
+            <p>Your team is your strengh, select your favorite players</p>
+            <div className='div-select'>
             <FormControl>
                 <InputLabel>{"Select Team"}</InputLabel>
                 <Select
@@ -51,9 +53,10 @@ const SelectTeam = () => {
                 </Select>
             </FormControl>
             <div className='players'>
-            <SelectPlayers/>
+                <SelectPlayers/>
             </div>
         </div>
+        </>
     )
 }
 

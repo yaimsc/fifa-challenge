@@ -1,5 +1,4 @@
 import React, {useEffect, useState } from "react";
-// import { debounce } from "lodash";
 import { Player } from './common';
 
 const SelectPlayers = () => {
@@ -9,11 +8,11 @@ const SelectPlayers = () => {
     const [players, setPlayers] = useState([]);
     const [selectedArray, setSelectedArray] = useState([]);
     const error = "";
-    const [defenders, setDefenders] = useState([]);
-    const [midfielders, setMidfielders] = useState([]);
-    const [attackers, setAttackers] = useState([]);
-    const [goalkeepers, setGoalkeepers] = useState([]);
-    const [ownTeam, setOwnTeam] = useState([...defenders, ...midfielders, ...attackers, ...goalkeepers]);
+    // const [defenders, setDefenders] = useState([]);
+    // const [midfielders, setMidfielders] = useState([]);
+    // const [attackers, setAttackers] = useState([]);
+    // const [goalkeepers, setGoalkeepers] = useState([]);
+    const [ownTeam, setOwnTeam] = useState([...selectedArray]);
 
     useEffect(() => {
         setTimeout(() => {
@@ -38,11 +37,39 @@ const SelectPlayers = () => {
         else {tempArray[i]=i}
         console.log(tempArray)
         setSelectedArray(tempArray)
-    }
+            // setOwnTeam({index: i, id: players[i].id, name: players[i].name, position: players[i].position})
+
+        // setOwnTeam(selectedArray)
+        }
+
+
+    //  const handleClick = (i) => {
+    //     const tempArray =[...selectedArray]
+    //     console.log(i)
+    //     console.log(tempArray[i])
+    //     if(tempArray[i] !== [] && tempArray[i]===i){tempArray[i]=undefined}
+    //     else {tempArray[i]=i}
+    //     console.log(tempArray)
+    //     setSelectedArray(tempArray)
+    // }
+
+    // const handleClick = (i) => {
+    //     const ownArray = [...selectedArray]
+    //     setSelectedArray(players.map((player,key) => {
+    //         if(key !== i) return key;
+    //             return {...key, name: player.name, position: player.position}}
+    //     ))
+    // }
+
+    // const selected = (player, key) =>{
+    //     if(ownTeam[key].id !== undefined){ ownTeam=[...ownTeam]}
+    //      return selectedArray[key].id === player[key].id ? true : false
+    // }
 
     return(
         <>
         {players.map((player, key) => (
+            console.log(ownTeam[key]),
             <Player
                 key={key}
                 index={key}

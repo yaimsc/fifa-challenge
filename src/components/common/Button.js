@@ -1,9 +1,10 @@
 import React from 'react';
+import { Button } from '@mui/material';
 
-const Button = ({title}) => {
+const BasicButton = ({title, type}) => {
     return (
-        <button type="submit">{title}</button>
+        <Button className="button" variant="contained" type={type}>{title}</Button>
     )
 }
 
-export default Button;
+export default BasicButton;

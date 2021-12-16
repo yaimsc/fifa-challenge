@@ -2,9 +2,9 @@ import React from 'react';
 import { FormHelperText } from '@mui/material';
 
 
-const Error = ({error}) => {
+const Error = ({errorLabel}) => {
     return (
-        <FormHelperText>{error}</FormHelperText>
+        <FormHelperText id="component-error-text">{errorLabel}</FormHelperText>
     )
 }
 
