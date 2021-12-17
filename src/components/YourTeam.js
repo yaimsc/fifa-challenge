@@ -1,17 +1,22 @@
 import React from 'react';
-import { Label } from '@mui/material';
+import { Label, Chip } from '@mui/material';
 
 const YourTeam = () => {
     return(
         <>
-            <p>Your selected team</p>
+            <h2>Your selected team</h2>
             <div>
-                <Label>Team Name</Label>
+                <h3>Team Name</h3>
                 <p>{localStorage.getItem('teamName')}</p>
             </div>
             <div>
-                <Label>Coach Name</Label>
+                <h3>Coach</h3>
                 <p>{localStorage.getItem('coachName')}</p>
+            </div>
+            <div>
+                <h3>Players</h3>
+                <p>Defenders</p>
+                {}
             </div>
         </>
     )

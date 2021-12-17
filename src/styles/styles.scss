@@ -17,6 +17,24 @@ body{
     margin-left: 10px;
 }
 
+.div-body{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.create{
+    width: 75%;
+}
+
+.your-team{
+    // border-left: 1px solid $color-lightgrey;
+    padding-left: 20px;
+    width: 25%;
+    padding-top: 100px;
+    height: 100vh;
+}
+
 h1,h2,h3,h4,h5,h6{
     font-family: $font-family;
 }
@@ -35,6 +53,8 @@ p{
     background-color: $color-black;
     color: $color-white;
 }
+
+
 
 
 

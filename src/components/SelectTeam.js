@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 import SelectPlayers from './SelectPlayers';
+import { Button } from './common';
 
 const SelectTeam = () => {
     const [teams, setTeams] = useState([]);
@@ -13,6 +14,7 @@ const SelectTeam = () => {
 
 
     const handleChange = (event) => {
+        setSelect('')
         setSelect(event.target.value);
     }
 
@@ -54,6 +56,7 @@ const SelectTeam = () => {
             </FormControl>
             <div className='players'>
                 <SelectPlayers/>
+                <Button>{'Añadir'}</Button>
             </div>
         </div>
         </>
