@@ -1,6 +1,7 @@
 import React, {useEffect, useState } from "react";
-import { FormControl, MenuItem, InputLabel, Select, OutlinedInput } from "@mui/material";
-import { Player } from './common';
+import { Stack, Chip, MenuItem, Select, OutlinedInput } from "@mui/material";
+import { BasicButton, LabelSelect } from './common';
+import validate from './../functions/validate';
 
 const SelectPlayers = () => {
 
@@ -19,13 +20,6 @@ const SelectPlayers = () => {
     console.log("selectedteam")
     console.log(selectedTeam);
     const [players, setPlayers] = useState([]);
-    const [selected, setSelected] = useState(false);
-    // const [selectedArray, setSelectedArray] = useState([]);
-    const error = "";
-    // const [defenders, setDefenders] = useState([]);
-    // const [midfielders, setMidfielders] = useState([]);
-    // const [attackers, setAttackers] = useState([]);
-    // const [goalkeepers, setGoalkeepers] = useState([]);
     const [player, setPlayer] = useState([]);
     const [ownTeam, setOwnTeam] = useState([]);
 
@@ -43,99 +37,79 @@ const SelectPlayers = () => {
             .catch(error => console.error(error))
             : "Loading Data ..."
         }, 300)
+        addPlayer()
         }, [selectedTeam])
 
-
-    // const handleClick = (i) => {
-    //     const tempArray =[...selectedArray]
-    //     if(tempArray[i]===i){tempArray[i]=undefined}
-    //     else {tempArray[i]=i}
-    //     console.log(tempArray)
-    //     setSelectedArray(tempArray)
-    //         // setOwnTeam({index: i, id: players[i].id, name: players[i].name, position: players[i].position})
-
-    //     // setOwnTeam(selectedArray)
-    //     }
-
-    const handleChange = (event, player) => {
-        
-        // console.log(event.target);
-        // const {
-        //     target: { value },
-        //   } = event;
-
-          setPlayer(
-            // On autofill we get a the stringified value.
-            // typeof value === 'string' ? value.split(',') : value,
-            event.target.value
-          );
-        // ownTeam[i].selected = !ownTeam[i].selected;
-        if(event.target.value.id === ownTeam.forEach( player => player.id)){
-            return ''
-        }else{
-            setOwnTeam(ownTeam.push(event.target.value))
-            setPlayer('')
-        }
-        console.log(ownTeam)
-        //setOwnTeam([...ownTeam,{index: i, id: players[i].id, name: players[i].name, position: players[i].position}])
+    const handleChange = (event) => {
+        setPlayer(event.target.value);
     }
 
+    const checkIfExists = (player) => {
+        return ownTeam.some(item => player.id === item.id);
+    }
 
-    //  const handleClick = (i) => {
-    //     const tempArray =[...selectedArray]
-    //     console.log(i)
-    //     console.log(tempArray[i])
-    //     if(tempArray[i] !== [] && tempArray[i]===i){tempArray[i]=undefined}
-    //     else {tempArray[i]=i}
-    //     console.log(tempArray)
-    //     setSelectedArray(tempArray)
-    // }
+    const addPlayer = () => {
+        if(checkIfExists(player)){
+            return ''
+        }else{
+            setOwnTeam(ownTeam => [...ownTeam, player])
+            localStorage.setItem('yourTeam', JSON.stringify(ownTeam))
+            console.log(ownTeam)
+            return ownTeam
+        }
+    }
 
-    // const handleClick = (i) => {
-    //     const ownArray = [...selectedArray]
-    //     setSelectedArray(players.map((player,key) => {
-    //         if(key !== i) return key;
-    //             return {...key, name: player.name, position: player.position}}
-    //     ))
-    // }
+    const handlePlayerDelete = (playerToDelete) => {
+        setOwnTeam((team) => team.filter((player) => player !== playerToDelete))
+    }
+
+    const showSelectedPlayers = (ownTeam) => {
+        return (
+            <Stack direction="row">
+                {ownTeam === undefined ? '' : ownTeam.map((player,key) => (
+                    key === 0 ? '' : <Chip key={key} label={`${player.name} - ${player.position}`} onDelete={() => handlePlayerDelete(player)}/>
+                ))}
+            </Stack>
+        )
+    }
+
+    const onSubmit = () => {
+        validate(ownTeam)
+    }
 
     return(
         <>
-        {/* {players.map((player, key) => (
-            console.log(ownTeam[key]), */}
-            {/* <Player
-                key={key}
-                index={key}
-                name={player.name}
-                position={player.position}
-                nationality={player.nationality}
-                selected={selected}
-                handleClick={handleClick}
-            {/* /> */}
-            <div>
-            <FormControl sx={{ m: 1, width: 300 }}>
-                <InputLabel id="demo-multiple-name-label">Players</InputLabel>
-                <Select
-                labelId="demo-multiple-name-label"
-                id="demo-multiple-name"
-                value={player.name}
-                onChange={(event) => handleChange(event,player)}
-                input={<OutlinedInput label="Name" />}
-                MenuProps={MenuProps}
-                >
-                {players.map((player, key) => (
-                    <MenuItem
-                    key={key}
-                    value={player}
-                    // style={getStyles(name, personName, theme)}
+            <div className="player-select">
+            <LabelSelect
+                label="Select Player"
+                content={
+                    <Select
+                    value={player === '' ? '' : player}
+                    onChange={handleChange}
+                    input={<OutlinedInput label="Name" />}
+                    MenuProps={MenuProps}
                     >
-                    {player.name} - {player.position}
-                    </MenuItem>
-                ))}
-                </Select>
-            </FormControl>
+                    {players.map((player, key) => (
+                        <MenuItem
+                        key={key}
+                        value={player}
+                        >
+                        {player.name} - {player.position}
+                        </MenuItem>
+                    ))}
+                    </Select>
+                }
+            />
+                <BasicButton
+                    type="submit"
+                    title="Add"
+                    onClick={addPlayer}
+                />
             </div>
-        {/* } */}
+            <div>
+                {showSelectedPlayers(ownTeam)}
+                <BasicButton type="submit" title="submit" onClick={onSubmit} />
+            </div>
         </>
     )
 }

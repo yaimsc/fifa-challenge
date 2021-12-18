@@ -1,6 +1,6 @@
 import React from "react";
 import { Header } from './components/common';
-import { TeamName, CoachName, SelectTeam, YourTeam } from './components';
+import { TeamName, CoachName, SelectTeam, SelectPlayers } from './components';
 import './styles/styles.scss';
 
 const App = () => {
@@ -13,9 +13,6 @@ const App = () => {
             <TeamName />
             <CoachName />
             <SelectTeam />
-            </div>
-            <div className="your-team">
-              <YourTeam />
             </div>
           </div>
         </>

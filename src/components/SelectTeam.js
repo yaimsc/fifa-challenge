@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
+import { Select, MenuItem } from '@mui/material';
 import SelectPlayers from './SelectPlayers';
-import { Button } from './common';
+import { LabelSelect } from './common';
 
 const SelectTeam = () => {
     const [teams, setTeams] = useState([]);
@@ -10,14 +10,8 @@ const SelectTeam = () => {
     useEffect(() => {
             fetchData()
             localStorage.setItem('selectedTeam', selected);
+            localStorage.setItem('teams', JSON.stringify(teams))
     }, [selected]);
-
-
-    const handleChange = (event) => {
-        setSelect('')
-        setSelect(event.target.value);
-    }
-
 
     const fetchData = async() => {
         return await fetch('https://api.football-data.org/v2/competitions/WC/teams', {
@@ -31,15 +25,20 @@ const SelectTeam = () => {
         .catch(error => console.error(error))
     }
 
+
+    const handleChange = (event) => {
+        setSelect(event.target.value);
+    }
+
     console.log(teams);
 
     return(
         <>
             <p>Your team is your strengh, select your favorite players</p>
             <div className='div-select'>
-            <FormControl>
-                <InputLabel>{"Select Team"}</InputLabel>
-                <Select
+            <LabelSelect
+                label={"Select team"}
+                content={<Select
                 id="select"
                 value={selected==='' ? localStorage.getItem('selectedTeam') : selected}
                 onChange={handleChange}
@@ -52,13 +51,11 @@ const SelectTeam = () => {
                         </MenuItem>
                     ))
                 }
-                </Select>
-            </FormControl>
+                </Select>} />
+            </div>
             <div className='players'>
                 <SelectPlayers/>
-                <Button>{'Añadir'}</Button>
             </div>
-        </div>
         </>
     )
 }
