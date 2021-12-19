@@ -7,8 +7,8 @@ import validate from './../functions/validate';
 const CreateTeam = () => {
   const navigate = useNavigate();
 
-  const [teamName, setTeamName] = useState();
-  const [coachName, setCoachName] = useState();
+  const [teamName, setTeamName] = useState('');
+  const [coachName, setCoachName] = useState('');
   const [error, setError] = useState([]);
 
   const finalTeam = JSON.parse(localStorage.getItem('yourTeam'));
@@ -26,7 +26,10 @@ const CreateTeam = () => {
   const onSubmit = () => {
     setError(validate(teamName, coachName, finalTeam))
     console.log(error)
-    if(error === []) navigate('/your-team')
+    if(error.length === 0 && finalTeam.length !== 0){
+      alert("You have save the team sucessfully !!")
+      navigate('/your-team')
+    }
   }
 
   return (
@@ -54,7 +57,6 @@ const CreateTeam = () => {
       <BasicButton title="submit" variant="contained" onClick={onSubmit}/>
     </div>
     </>
-  
   )
 }
 

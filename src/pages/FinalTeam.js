@@ -8,21 +8,13 @@ const FinalTeam = () => {
   const defenders = finalPlayers.filter(player => player.position === 'Defenders');
   const midfielders = finalPlayers.filter(player => player.position === 'Midfielders');
   const attackers = finalPlayers.filter(player => player.position === 'Attacker');
-  const goalkeepers = finalPlayers.filter(player => player.position === 'Attacker');
-
-  const showPlayers = (players) => {
-    players.map(player => (
-        <Stack direction={'row'} spacing={1}>
-          <Chip label={player.name} variant={'outlined'}/>
-        </Stack>
-    ))
-  }
+  const goalkeepers = finalPlayers.filter(player => player.position === 'Goalkeeper');
 
   return(
     <>
       <Header />
-      <div>
-        <h2>Your selected team</h2>
+      <div class="create">
+        <h2 class="title">Your selected team</h2>
         <div>
           <h3>Team Name</h3>
           <p>{localStorage.getItem('teamName')}</p>
@@ -34,13 +26,29 @@ const FinalTeam = () => {
         <div>
           <h3>Players</h3>
           <p>Defenders</p>
-          {showPlayers(defenders)}
+          {defenders.map((defender, key) => (
+            <Stack direction={'row'} spacing={1}>
+              <Chip key={key} label={defender.name} variant={'outlined'}/>
+            </Stack>
+          ))}
           <p>Midfielders</p>
-          {showPlayers(midfielders)}
+          {midfielders.map((midfielder, key) => (
+            <Stack direction={'row'} spacing={1}>
+              <Chip key={key} label={midfielder.name} variant={'outlined'}/>
+            </Stack>
+          ))}
           <p>Attackers</p>
-          {showPlayers(attackers)}
+          {attackers.map((attacker, key) => (
+            <Stack direction={'row'} spacing={1}>
+              <Chip key={key} label={attacker.name} variant={'outlined'}/>
+            </Stack>
+          ))}
           <p>Goalkeepers</p>
-          {showPlayers(goalkeepers)}
+          {goalkeepers.map((goalkeeper, key) => (
+            <Stack direction={'row'} spacing={1}>
+              <Chip key={key} label={goalkeeper.name} variant={'outlined'}/>
+            </Stack>
+          ))}
         </div>
       </div>
     </>
