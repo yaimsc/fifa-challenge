@@ -2,7 +2,6 @@
 @import 'vars';
 @import 'font';
 
-@import 'card';
 @import 'header';
 @import 'select';
 
@@ -10,21 +9,29 @@
 body{
   padding-left: 10px;
   padding-right: 10px;
+  display: grid;
 }
 
 #root{
   margin-top: 10px;
-  margin-left: 20px;
+  margin-left: 5%;
 }
 
 .div-body{
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: five;
+  grid-row-start: row1-start;
+  grid-row-end: 3;
 }
 
 .create{
   width: 75%;
+}
+
+form{
+  padding-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .your-team{

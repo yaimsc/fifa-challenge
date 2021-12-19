@@ -1,5 +1,6 @@
 .header{
-  height: $headerHeight;
+  min-height: $headerHeight;
+  max-height: fit-content;
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -14,6 +15,7 @@
 
 .icon {
 	display: inline-block;
+  height: $headerHeight;
 	padding: 10px 30px 10px 30px;
     &:after{
       position: absolute;
