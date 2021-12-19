@@ -1,5 +1,5 @@
 .header{
-    height: $headerHeight;
+  height: $headerHeight;
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -16,15 +16,15 @@
 	display: inline-block;
 	padding: 10px 30px 10px 30px;
     &:after{
-        position: absolute;
-        top: calc(50% - 19px);
-        right: -30px;
-        background: $color-lightgrey;
-        width: 1px;
-        height: 38px;
+      position: absolute;
+      top: calc(50% - 19px);
+      right: -30px;
+      background: $color-lightgrey;
+      width: 1px;
+      height: 38px;
     }
 }
 
 .header-title{
-    font-family: 'adidas-bold';
+  font-family: 'adidas-bold';
 }

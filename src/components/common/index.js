@@ -8,10 +8,10 @@ import Header from './Header';
 import Player from './Player';
 
 export {
-    BasicButton,
-    Input,
-    Error,
-    LabelSelect,
-    Header,
-    Player
+  BasicButton,
+  Input,
+  Error,
+  LabelSelect,
+  Header,
+  Player
 }

@@ -8,51 +8,50 @@
 
 
 body{
-    padding-left: 10px;
-    padding-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #root{
-    margin-top: 10px;
-    margin-left: 10px;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
 .div-body{
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .create{
-    width: 75%;
+  width: 75%;
 }
 
 .your-team{
-    // border-left: 1px solid $color-lightgrey;
-    padding-left: 20px;
-    width: 25%;
-    padding-top: 100px;
-    height: 100vh;
+  // border-left: 1px solid $color-lightgrey;
+  padding-left: 20px;
+  width: 25%;
+  padding-top: 100px;
+  height: 100vh;
 }
 
 h1,h2,h3,h4,h5,h6{
-    font-family: $font-family;
+  font-family: $font-family;
 }
 
 p{
-    font-family: $font-family;
-    font-size: 14pt;
+  font-family: $font-family;
 }
 
 .title{
-    margin-top: 100px;
-    font-size: 20pt;
+  margin-top: 100px;
+  font-size: 20pt;
 }
 
 .button{
-    background-color: $color-black;
-    color: $color-white;
-    padding: 6px 5px;
+  background-color: $color-black;
+  color: $color-white;
+  padding: 6px 5px;
 }
 
 
