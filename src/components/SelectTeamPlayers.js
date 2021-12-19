@@ -97,7 +97,7 @@ const SelectTeamPlayers = () => {
               label={"Select team"}
             >
             {teams.map((value, key) => (
-              <MenuItem key={key} value={value.id}>
+              <MenuItem key={key} value={value.id} sx={{zInxdex: 1251}}>
                 {value.name}
               </MenuItem>
               ))
@@ -119,6 +119,7 @@ const SelectTeamPlayers = () => {
                 <MenuItem
                 key={key}
                 value={player}
+                sx={{zIndex: 1251}}
                 >
                 {player.name} - {player.position}
                 </MenuItem>
