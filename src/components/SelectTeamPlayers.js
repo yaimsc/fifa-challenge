@@ -49,11 +49,16 @@ const SelectTeamPlayers = () => {
     return ownTeam.some((item) => player.id === item.id);
   };
 
+  /*
+  * Add player function sets pleyer selected with a delay
+  * haven't found a fix soon enough and had to move on to the next task
+  */
+
   const addPlayer = () => {
     if (checkIfExists(player)) {
       return alert("You have that player already selected");
     } else {
-      setOwnTeam((ownTeam) => [...ownTeam, player]);
+      setOwnTeam((ownTeam) => [...ownTeam, player])
       localStorage.setItem("yourTeam", JSON.stringify(ownTeam));
       console.log(ownTeam);
       return ownTeam;

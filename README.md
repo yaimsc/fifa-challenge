@@ -1,10 +1,14 @@
-# Getting Started with Create React App
+# Adidas Fifa Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Frontend ReactJS Web Application project by Yaiza Muñoz.
 
-## Available Scripts
+## Technologies & Libraries used
 
-In the project directory, you can run:
+For the project I have used:
+- React with Hooks & Functiional Components
+- React Router for navigation
+- For styling & Components: SASS & Material UI
+- React Testing Library for tests
 
 ### `npm start`
 
