@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/fifa-challenge/static/css/main.76a5fcb7.chunk.css",
-    "main.js": "/fifa-challenge/static/js/main.07ad65c7.chunk.js",
-    "main.js.map": "/fifa-challenge/static/js/main.07ad65c7.chunk.js.map",
+    "main.js": "/fifa-challenge/static/js/main.db213926.chunk.js",
+    "main.js.map": "/fifa-challenge/static/js/main.db213926.chunk.js.map",
     "runtime-main.js": "/fifa-challenge/static/js/runtime-main.8b8d4945.js",
     "runtime-main.js.map": "/fifa-challenge/static/js/runtime-main.8b8d4945.js.map",
-    "static/js/2.251c02ba.chunk.js": "/fifa-challenge/static/js/2.251c02ba.chunk.js",
-    "static/js/2.251c02ba.chunk.js.map": "/fifa-challenge/static/js/2.251c02ba.chunk.js.map",
+    "static/js/2.1d121308.chunk.js": "/fifa-challenge/static/js/2.1d121308.chunk.js",
+    "static/js/2.1d121308.chunk.js.map": "/fifa-challenge/static/js/2.1d121308.chunk.js.map",
     "static/js/3.eff24132.chunk.js": "/fifa-challenge/static/js/3.eff24132.chunk.js",
     "static/js/3.eff24132.chunk.js.map": "/fifa-challenge/static/js/3.eff24132.chunk.js.map",
     "index.html": "/fifa-challenge/index.html",
     "static/css/main.76a5fcb7.chunk.css.map": "/fifa-challenge/static/css/main.76a5fcb7.chunk.css.map",
-    "static/js/2.251c02ba.chunk.js.LICENSE.txt": "/fifa-challenge/static/js/2.251c02ba.chunk.js.LICENSE.txt",
+    "static/js/2.1d121308.chunk.js.LICENSE.txt": "/fifa-challenge/static/js/2.1d121308.chunk.js.LICENSE.txt",
     "static/media/adidas_logo.1dc7c692.png": "/fifa-challenge/static/media/adidas_logo.1dc7c692.png",
     "static/media/styles.scss": "/fifa-challenge/static/media/texgyreadventor-regular-webfont.7f83f775.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.8b8d4945.js",
-    "static/js/2.251c02ba.chunk.js",
+    "static/js/2.1d121308.chunk.js",
     "static/css/main.76a5fcb7.chunk.css",
-    "static/js/main.07ad65c7.chunk.js"
+    "static/js/main.db213926.chunk.js"
   ]
 }
