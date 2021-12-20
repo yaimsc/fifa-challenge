@@ -1,5 +1,6 @@
 {
   "name": "fifa-challenge",
+  "homepage": "https://yaimsc.github.io/fifa-challenge/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
