@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { Header } from './../components/common';
-import { Stack, Chip, Dialog, DialogActions, DialogContent, Button } from '@mui/material';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Header, BasicButton } from './../components/common';
+import { Stack, Chip } from '@mui/material';
+
 
 const FinalTeam = () => {
+  const navigate = useNavigate();
+
   const finalPlayers = JSON.parse(localStorage.getItem('yourTeam'))
 
   const defenders = finalPlayers.filter(player => player.position === 'Defenders');
@@ -10,10 +14,15 @@ const FinalTeam = () => {
   const attackers = finalPlayers.filter(player => player.position === 'Attacker');
   const goalkeepers = finalPlayers.filter(player => player.position === 'Goalkeeper');
 
+  const clearBack = () => {
+    localStorage.clear()
+    navigate(-1)
+  }
+
   return(
     <>
       <Header />
-      <div class="create">
+      <div class="create" data-testid="final-team">
         <h2 class="title">Your selected team</h2>
         <div>
           <h3>Team Name</h3>
@@ -50,6 +59,10 @@ const FinalTeam = () => {
             </Stack>
           ))}
         </div>
+        <BasicButton
+          onClick={() => clearBack()}
+          title="Go back & Start a new team"
+        />
       </div>
     </>
   )

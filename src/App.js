@@ -6,10 +6,12 @@ import './styles/styles.scss';
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<CreateTeam />}/>
-      <Route path="your-team" element={<FinalTeam />}/>
-    </Routes>
+      <Routes>
+        <Route exact path="/" element={<CreateTeam />}/>
+        {localStorage.getItem('yourTeam') === '' ?
+        <Route exact path="/" element={<CreateTeam />}/> :
+        <Route exact path="your-team" element={<FinalTeam />}/>}
+      </Routes>
   )
 }
 

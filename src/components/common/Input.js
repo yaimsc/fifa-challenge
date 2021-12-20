@@ -10,6 +10,7 @@ const Input = ({label, error, handleChange, value, name}) => {
         name={name}
         value={value}
         error={error}
+        data-testid="input"
       />
     </>
   )

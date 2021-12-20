@@ -86,7 +86,7 @@ const SelectTeamPlayers = () => {
   return(
     <>
       <h3>Your team is your strengh, select your favorite players</h3>
-      <div className='div-select'>
+      <div className='div-select' data-testid="selects">
         <LabelSelect
           label={"Select team"}
           content={

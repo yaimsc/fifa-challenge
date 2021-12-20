@@ -4,7 +4,7 @@ import { FormHelperText } from '@mui/material';
 
 const Error = ({error}) => {
     return (
-        <FormHelperText error id="component-error-text">{error}</FormHelperText>
+        <FormHelperText error id="component-error-text" data-testid="error-text">{error}</FormHelperText>
     )
 }
 

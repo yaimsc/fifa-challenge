@@ -1,8 +1,15 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render } from "@testing-library/react";
+import { createMemoryHistory } from 'history';
+import React from 'react';
+import { Router } from 'react-router-dom';
+// const { render } = require("@testing-library/react");
+// const { createMemoryHistory } = require("history");
+// const React = require("react");
+// const { Router } = require("react-router-dom");
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+it("navigation works", () => {
+  const history = createMemoryHistory();
+  render(
+    <Router location={history.location} navigator={history}></Router>
+  );
 });

@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className='header'>
       <img className="icon" alt="adidas" src={icon}/>
-      <h1 className='header-title'>Your Adidas Team</h1>
+      <h1 className='header-title' data-testid="header-title">Your Adidas Team</h1>
     </div>
   )
 }

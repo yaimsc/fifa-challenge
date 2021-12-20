@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Header, Input, BasicButton, Error } from './../components/common';
 import SelectTeamPlayers from '../components/SelectTeamPlayers';
@@ -12,6 +12,10 @@ const CreateTeam = () => {
   const [error, setError] = useState([]);
 
   const finalTeam = JSON.parse(localStorage.getItem('yourTeam'));
+
+  useEffect(() => {
+    localStorage.clear()
+  }, [])
 
   const handleTeamChange = (event) => {
     setTeamName(event.target.value)
@@ -35,7 +39,7 @@ const CreateTeam = () => {
   return (
     <>
       <Header />
-      <div className='create'>
+      <div className='create' data-testid="create-team">
       <h2 className="title">Create your own Adidas team</h2>
       <p className="instructions"> Your team needs at least 4 defenders, 4 midfielders, 2 attackers & 2 goalkeepers and cannot exceed 16 player.</p>
       <h3>Your team name is your brand, give us your favorite name</h3>
@@ -54,7 +58,7 @@ const CreateTeam = () => {
       {error.map((error, key) => (
         <Error error={error} key={key}/>
       ))}
-      <BasicButton title="submit" variant="contained" onClick={onSubmit}/>
+      <BasicButton type="submit" title="submit" variant="contained" onClick={onSubmit}/>
     </div>
     </>
   )

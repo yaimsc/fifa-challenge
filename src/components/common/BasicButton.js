@@ -8,6 +8,7 @@ const BasicButton = ({title, type, onClick, variant}) => {
       variant={variant}
       type={type}
       onClick={onClick}
+      data-testid="button"
     >
     {title}
     </Button>
