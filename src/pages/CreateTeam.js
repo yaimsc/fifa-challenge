@@ -13,10 +13,6 @@ const CreateTeam = () => {
 
   const finalTeam = JSON.parse(localStorage.getItem('yourTeam'));
 
-  useEffect(() => {
-    localStorage.clear()
-  }, [])
-
   const handleTeamChange = (event) => {
     setTeamName(event.target.value)
     localStorage.setItem('teamName', teamName)
@@ -30,7 +26,7 @@ const CreateTeam = () => {
   const onSubmit = () => {
     setError(validate(teamName, coachName, finalTeam))
     console.log(error)
-    if(error.length === 0 && finalTeam.length !== 0){
+    if(error === [] && finalTeam.length !== 0){
       alert("You have save the team sucessfully !!")
       navigate('/your-team')
     }
@@ -58,7 +54,7 @@ const CreateTeam = () => {
       {error.map((error, key) => (
         <Error error={error} key={key}/>
       ))}
-      <BasicButton type="submit" title="submit" variant="contained" onClick={onSubmit}/>
+      <BasicButton title="submit" variant="contained" onClick={onSubmit}/>
     </div>
     </>
   )
