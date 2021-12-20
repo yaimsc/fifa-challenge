@@ -30,7 +30,7 @@ jobs:
     - name: Build page
       run: npm run build
     - name: Test
-      run: npm test --if-present
+      run: npm run test --if-present
       env:
         CI: false
     - name: Deploy to gh-pages
