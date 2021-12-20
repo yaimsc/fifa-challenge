@@ -1,7 +1,7 @@
-import React from 'react';
-import { Button } from '@mui/material';
+import React from "react";
+import { Button } from "@mui/material";
 
-const BasicButton = ({title, type, onClick, variant}) => {
+const BasicButton = ({ title, type, onClick, variant }) => {
   return (
     <Button
       className="button"
@@ -10,9 +10,9 @@ const BasicButton = ({title, type, onClick, variant}) => {
       onClick={onClick}
       data-testid="button"
     >
-    {title}
+      {title}
     </Button>
-  )
-}
+  );
+};
 
 export default BasicButton;

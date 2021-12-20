@@ -1,11 +1,11 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import FinalTeam from './FinalTeam'
-import { BasicButton } from '../components/common';
+import React from "react";
+import { render } from "@testing-library/react";
+import FinalTeam from "./FinalTeam";
+import { BasicButton } from "../components/common";
 
 const mockUseNavigate = jest.fn();
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
+jest.mock("react-router-dom", () => ({
+  ...jest.requireActual("react-router-dom"),
   useNavigate: () => mockUseNavigate,
 }));
 
@@ -16,7 +16,7 @@ jest.mock('react-router-dom', () => ({
 //   expect(screen.getByText(/Your selected team/i)).toBeInTheDocument();
 // });
 
-it('can go back', () => {
-  render(<BasicButton onClick={mockUseNavigate}/>)
+it("can go back", () => {
+  render(<BasicButton onClick={mockUseNavigate} />);
   expect(mockUseNavigate).toBeTruthy();
 });

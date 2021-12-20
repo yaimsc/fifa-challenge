@@ -1,8 +1,8 @@
-import React from 'react';
-import { TextField } from '@mui/material';
+import React from "react";
+import { TextField } from "@mui/material";
 
-const Input = ({label, error, handleChange, value, name}) => {
-  return(
+const Input = ({ label, error, handleChange, value, name }) => {
+  return (
     <>
       <TextField
         onChange={handleChange}
@@ -13,7 +13,7 @@ const Input = ({label, error, handleChange, value, name}) => {
         data-testid="input"
       />
     </>
-  )
-}
+  );
+};
 
 export default Input;
