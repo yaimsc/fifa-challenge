@@ -1,5 +1,5 @@
-import React from 'react';
-import { FormControl, InputLabel } from '@mui/material';
+import React from "react";
+import { FormControl, InputLabel } from "@mui/material";
 
 const LabelSelect = ({ label, content }) => {
   return (
@@ -7,7 +7,7 @@ const LabelSelect = ({ label, content }) => {
       <InputLabel>{label}</InputLabel>
       {content}
     </FormControl>
-  )
-}
+  );
+};
 
 export default LabelSelect;
