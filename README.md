@@ -13,6 +13,7 @@ For the project I have used:
 - React Testing Library for tests (basic tests as I try learning a bit with the challenge)
 - Github Actions for automated deployment into Github Pages
 
+## Start the Project
 ### Open Project on localhost
 
 Clone the project into you local to run the app in the development server.
@@ -30,6 +31,14 @@ You can start the server into your localhost with the following command:
 `npm start`
 
 This will open localhost:3000
+
+### Web App Page
+
+On `.github/Workflows/deploy.yml`there is the Github Action to automate the deploy process of the React Web App into Github Pages.
+
+The link to the site is the following one:
+
+(Adidas Fifa Challenge)[https://yaimsc.github.io/fifa-challenge/]
 
 ### Launch the test runner
 
