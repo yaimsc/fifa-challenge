@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useLocalStorage } from "react";
 import { Select, MenuItem, Stack, Chip, OutlinedInput } from "@mui/material";
 import { BasicButton, LabelSelect } from "./common";
 
@@ -40,6 +40,10 @@ const SelectTeamPlayers = () => {
         .catch((error) => console.error(error));
     }
   }, [selected]);
+
+  useEffect(() => {
+    setOwnTeam(JSON.parse(localStorage.getItem('yourTeam')))
+  }, [])
 
   const handlePlayerChange = (event) => {
     setPlayer(event.target.value);

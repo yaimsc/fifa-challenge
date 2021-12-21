@@ -1,29 +1,40 @@
 export default function validate(teamName, coachName, ownTeam) {
   const teams = JSON.parse(localStorage.getItem("teams"));
-  let error = [];
-  // ownTeam.slice(1);
+  let error = '';
+  let valid= false;
+  console.log(ownTeam);
   if (ownTeam === null || ownTeam === "" || ownTeam === undefined) {
-    error.push("Your team is empty");
+    error += `Your team is empty\n`;
   } else {
     if (teamName === "" || teamName === undefined)
-      error.push(`Team name is required`);
+      error += `Team name is required\n`
     if (coachName === "" || coachName === undefined)
-      error.push(`Coach name is required`);
+      error += `Coach name is required\n`
+    if(ownTeam.length < 12)
+      error += `You need at least 12 players\n`
     if (ownTeam.length > 16)
-      error.push(`Your team can only have 16 players, coach included`);
+      error += `Your team can only have 16 players, coach included\n`
     if (ownTeam.filter((player) => player.position === "Defender").length < 4)
-      error.push(`You need at least 4 Defenders, try adding more`);
+      error += `You need at least 4 Defenders, try adding more\n`
     if (ownTeam.filter((player) => player.position === "Midfielder").length < 4)
-      error.push(`You need at least 4 Midfielders, try adding more`);
+      error += `You need at least 4 Midfielders, try adding more\n`
     if (ownTeam.filter((player) => player.position === "Attacker").length < 2)
-      error.push(`You need at least 2 Attackers, try adding more`);
+      error += `You need at least 2 Attackers, try adding more\n`
     if (ownTeam.filter((player) => player.position === "Goalkeeper").length < 2)
-      error.push(`You need at least 2 Goalkeepers, try adding more`);
-    teams.map((team) =>
-      ownTeam.filter((player) => player.nationality === team.name).length > 4
-        ? error.push(`You cannot select more than 4 players from the same team`)
-        : ""
-    );
+      error += `You need at least 2 Goalkeepers, try adding more\n`
+      if (teams !== null || teams !== "" || teams !== undefined)
+        teams.map((team) =>
+          ownTeam.filter((player) => player.nationality === team.name).length > 4
+            ? error +=`You cannot select more than 4 players from the same team\n`
+            : ""
+        );
   }
-  return error;
+  if(error === ''){
+    error = "You have no more errors, your team is succesfully completed"
+    alert(error)
+    valid= true
+  }else{
+    alert(error)
+  }
+  return valid;
 }

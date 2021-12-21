@@ -9,10 +9,10 @@ const FinalTeam = () => {
   const finalPlayers = JSON.parse(localStorage.getItem("yourTeam"));
 
   const defenders = finalPlayers.filter(
-    (player) => player.position === "Defenders"
+    (player) => player.position === "Defender"
   );
   const midfielders = finalPlayers.filter(
-    (player) => player.position === "Midfielders"
+    (player) => player.position === "Midfielder"
   );
   const attackers = finalPlayers.filter(
     (player) => player.position === "Attacker"
