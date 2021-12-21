@@ -6,7 +6,7 @@ import "./styles/styles.scss";
 
 const App = () => {
   return (
-    <Routes>
+    <Routes basename={process.env.PUBLIC_URL}>
       <Route exact path="/" element={<CreateTeam />} />
       <Route exact path="your-team" element={<FinalTeam />} />
     </Routes>
