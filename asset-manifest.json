@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/fifa-challenge/static/css/main.76a5fcb7.chunk.css",
-    "main.js": "/fifa-challenge/static/js/main.82c8d979.chunk.js",
-    "main.js.map": "/fifa-challenge/static/js/main.82c8d979.chunk.js.map",
+    "main.js": "/fifa-challenge/static/js/main.96d480a8.chunk.js",
+    "main.js.map": "/fifa-challenge/static/js/main.96d480a8.chunk.js.map",
     "runtime-main.js": "/fifa-challenge/static/js/runtime-main.8b8d4945.js",
     "runtime-main.js.map": "/fifa-challenge/static/js/runtime-main.8b8d4945.js.map",
     "static/js/2.3ff6dfec.chunk.js": "/fifa-challenge/static/js/2.3ff6dfec.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.8b8d4945.js",
     "static/js/2.3ff6dfec.chunk.js",
     "static/css/main.76a5fcb7.chunk.css",
-    "static/js/main.82c8d979.chunk.js"
+    "static/js/main.96d480a8.chunk.js"
   ]
 }
