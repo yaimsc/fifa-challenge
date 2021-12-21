@@ -42,6 +42,8 @@ The link to the site is the following one:
 
 (Adidas Fifa Challenge)[https://yaimsc.github.io/fifa-challenge/]
 
+If you have any trouble with the link and something is not correclty or the page is blank, don't hesitate on contacting me. 
+
 Aswell you can deploy the content with:
 
 `npm run deploy`
@@ -55,9 +57,10 @@ For launching the test and watch that everything is okay, run the following comm
 #### Known Bugs
 
 When you are selecting players:
- - You need to add one more as usual, as the setter of array append goes with 1 select delay.
+ - Mexico Players not showing due to API (the rest of country - players works fine, this issue comes from the API itself. 
+ - You need to add one more player than usual, as the setter of the array append goes with 1 select delay.
   Haven't found a solution quick enough & decided to move on to finish the project correctly.
   On `src > components > SelectTeamPlayers.js > addPlayer()` is the code to see how I am doing the process.
 Tests:
-- `Finalteam.test.js`is not the correct test as it involves localStorage process and was more complex. I just strated today with tests & try the basic ones.
+- `Finalteam.test.js` is not the correct test as it involves localStorage process and was more complex. I just strated today with tests & try the basic ones.
 
