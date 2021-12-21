@@ -1,36 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Header, Input, BasicButton, Error } from "./../components/common";
+import { Header, Input, BasicButton } from "./../components/common";
 import SelectTeamPlayers from "../components/SelectTeamPlayers";
 import validate from "./../functions/validate";
 
 const CreateTeam = () => {
   const navigate = useNavigate();
-
-  const [teamName, setTeamName] = useState("");
-  const [coachName, setCoachName] = useState("");
-  const [error, setError] = useState([]);
+  const [teamName, setTeamName] = useState('');
+  const [coachName, setCoachName] = useState('')
+  const [valid, setValid] = useState(false);
 
   const finalTeam = JSON.parse(localStorage.getItem("yourTeam"));
 
+  useEffect(() => {
+    setTeamName(localStorage.setItem('teamName', ''))
+    setCoachName(localStorage.setItem('coachName', ''))
+  }, [])
+
   const handleTeamChange = (event) => {
     setTeamName(event.target.value);
-    localStorage.setItem("teamName", teamName);
+    localStorage.setItem("teamName", event.target.value);
   };
 
   const handleCoachChange = (event) => {
     setCoachName(event.target.value);
-    localStorage.setItem("coachName", coachName);
+    localStorage.setItem("coachName", event.target.value);
   };
 
   const onSubmit = () => {
-    setError(validate(teamName, coachName, finalTeam))
-    console.log(error)
-    if(error === [] && finalTeam.length !== 0){
-      alert("You have save the team sucessfully !!")
-      navigate('/your-team')
-    }
-  };
+    setValid(validate(teamName, coachName, finalTeam))
+    console.log(valid)
+    if(valid) navigate('/your-team')
+    // if(error === "" && finalTeam !== [])
+  }
 
   return (
     <>
@@ -54,9 +56,6 @@ const CreateTeam = () => {
           handleChange={handleCoachChange}
         />
         <SelectTeamPlayers />
-        {error.map((error, key) => (
-          <Error error={error} key={key} />
-        ))}
         <BasicButton
           type="submit"
           title="submit"
@@ -66,6 +65,7 @@ const CreateTeam = () => {
       </div>
     </>
   );
-};
+}
 
 export default CreateTeam;
+

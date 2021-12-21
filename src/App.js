@@ -8,11 +8,7 @@ const App = () => {
   return (
     <Routes>
       <Route exact path="/" element={<CreateTeam />} />
-      {localStorage.getItem("yourTeam") === "" ? (
-        <Route exact path="/" element={<CreateTeam />} />
-      ) : (
-        <Route exact path="your-team" element={<FinalTeam />} />
-      )}
+      <Route exact path="your-team" element={<FinalTeam />} />
     </Routes>
   );
 };
