@@ -42,6 +42,10 @@ The link to the site is the following one:
 
 (Adidas Fifa Challenge)[https://yaimsc.github.io/fifa-challenge/]
 
+Aswell you can deploy the content with:
+
+`npm run deploy`
+
 ### Launch the test runner
 
 For launching the test and watch that everything is okay, run the following command:
