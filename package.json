@@ -1,7 +1,7 @@
 {
   "name": "fifa-challenge",
-  "homepage": "https://yaimsc.github.io/fifa-challenge/",
   "version": "0.1.0",
+  "homepage": "https://yaimsc.github.io/fifa-challenge",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",
