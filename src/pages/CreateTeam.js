@@ -10,8 +10,6 @@ const CreateTeam = () => {
   const [coachName, setCoachName] = useState('')
   const [valid, setValid] = useState(false);
 
-  const finalTeam = JSON.parse(localStorage.getItem("yourTeam"));
-
   useEffect(() => {
     setTeamName(localStorage.setItem('teamName', ''))
     setCoachName(localStorage.setItem('coachName', ''))
@@ -28,10 +26,9 @@ const CreateTeam = () => {
   };
 
   const onSubmit = () => {
-    setValid(validate(teamName, coachName, finalTeam))
+    setValid(validate(teamName, coachName, JSON.parse(localStorage.getItem("yourTeam"))))
     console.log(valid)
     if(valid) navigate('/your-team')
-    // if(error === "" && finalTeam !== [])
   }
 
   return (
