@@ -30,7 +30,7 @@ export default function validate(teamName, coachName, ownTeam) {
         );
   }
   if(error === ''){
-    error = "You have no more errors, your team is succesfully completed"
+    error = "Congratulations! You have succesfully completed your, please press submit again to view your full team"
     alert(error)
     valid= true
   }else{
