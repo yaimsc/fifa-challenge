@@ -60,8 +60,7 @@ When you are selecting players:
  - Mexico Players not showing due to API (the rest of country - players works fine, this issue comes from the API itself.
  - ~~You need to add one more player than usual, as the setter of the array append goes with 1 select delay.~~
   On `src > components > SelectTeamPlayers.js > addPlayer()` is the code to see how I am doing the process.
-  `v1.0`
-  **Bug fixed.** Set localstorage on showSelectedPlayer().
+  **Bug fixed on v1.0** Set localstorage on showSelectedPlayer().
 Tests:
 - `Finalteam.test.js` is not the correct test as it involves localStorage process and was more complex. I just strated today with tests & try the basic ones.
 
