@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useLocalStorage } from "react";
+import React, { useEffect, useState } from "react";
 import { Select, MenuItem, Stack, Chip, OutlinedInput } from "@mui/material";
 import { BasicButton, LabelSelect } from "./common";
 

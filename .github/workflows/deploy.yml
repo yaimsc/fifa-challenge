@@ -2,7 +2,7 @@ name: Deployment
 on:
   push:
     branches:
-      - feature/cicd
+      - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
