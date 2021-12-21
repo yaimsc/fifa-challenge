@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Header, Input, BasicButton, Error } from "./../components/common";
 import SelectTeamPlayers from "../components/SelectTeamPlayers";
@@ -13,10 +13,6 @@ const CreateTeam = () => {
 
   const finalTeam = JSON.parse(localStorage.getItem("yourTeam"));
 
-  useEffect(() => {
-    localStorage.clear();
-  }, []);
-
   const handleTeamChange = (event) => {
     setTeamName(event.target.value);
     localStorage.setItem("teamName", teamName);
@@ -28,15 +24,11 @@ const CreateTeam = () => {
   };
 
   const onSubmit = () => {
-    console.log(error);
-    if (finalTeam === null) {
-      return "";
-    } else {
-      setError(validate(teamName, coachName, finalTeam));
-      if (error.length === 0 && finalTeam.length !== 0) {
-        alert("You have save the team sucessfully !!");
-        navigate("/your-team");
-      }
+    setError(validate(teamName, coachName, finalTeam))
+    console.log(error)
+    if(error === [] && finalTeam.length !== 0){
+      alert("You have save the team sucessfully !!")
+      navigate('/your-team')
     }
   };
 

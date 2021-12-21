@@ -29,8 +29,8 @@ const FinalTeam = () => {
   return (
     <>
       <Header />
-      <div class="create" data-testid="final-team">
-        <h2 class="title">Your selected team</h2>
+      <div className="create" data-testid="final-team">
+        <h2 className="title">Your selected team</h2>
         <div>
           <h3>Team Name</h3>
           <p>{localStorage.getItem("teamName")}</p>

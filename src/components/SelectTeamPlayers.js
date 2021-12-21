@@ -14,7 +14,7 @@ const SelectTeamPlayers = () => {
     fetch("https://api.football-data.org/v2/competitions/WC/teams", {
       method: "GET",
       headers: {
-        "X-Auth-Token": "842eabacaca542ec9ed31f058efc2115",
+        "X-Auth-Token": `${process.env.REACT_APP_API_KEY}`,
       },
     })
       .then((response) => response.json())
@@ -32,7 +32,7 @@ const SelectTeamPlayers = () => {
       fetch(`https://api.football-data.org/v2/teams/${selected}`, {
         method: "GET",
         headers: {
-          "X-Auth-Token": "842eabacaca542ec9ed31f058efc2115",
+          "X-Auth-Token": `${process.env.REACT_APP_API_KEY}`,
         },
       })
         .then((response) => response.json())
@@ -49,11 +49,16 @@ const SelectTeamPlayers = () => {
     return ownTeam.some((item) => player.id === item.id);
   };
 
+  /*
+  * Add player function sets pleyer selection with 1 of delay
+  * haven't found a fix soon enough and had to move on to the next task
+  */
+
   const addPlayer = () => {
     if (checkIfExists(player)) {
       return alert("You have that player already selected");
     } else {
-      setOwnTeam((ownTeam) => [...ownTeam, player]);
+      setOwnTeam((ownTeam) => [...ownTeam, player])
       localStorage.setItem("yourTeam", JSON.stringify(ownTeam));
       console.log(ownTeam);
       return ownTeam;

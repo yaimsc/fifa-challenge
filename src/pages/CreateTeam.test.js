@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 import { render } from "@testing-library/react";
 import CreateTeam from "./CreateTeam";
 
@@ -9,6 +10,10 @@ jest.mock("react-router-dom", () => ({
 }));
 
 it("form can be submitted", () => {
-  render(<CreateTeam onClick={mockUseNavigate} />);
+  render(
+    <BrowserRouter>
+      <CreateTeam onClick={mockUseNavigate} />
+    </BrowserRouter>
+  );
   expect(mockUseNavigate).toBeTruthy();
 });

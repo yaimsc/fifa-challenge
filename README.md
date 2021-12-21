@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Adidas Fifa Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a Frontend ReactJS Web Application project by Yaiza Muñoz.
 
-## Available Scripts
+Thank you for giving me this opportunity!
 
-In the project directory, you can run:
+## Technologies & Libraries used
 
-### `npm start`
+For the project I have used:
+- React with Hooks & Functional Components
+- React Router for navigation to show final selection
+- LocalStorage for browser data persistency
+- For styling & Components: SASS & Material UI
+- For cleaning code & code formatting: ESlint & Prettier
+- React Testing Library for tests (basic tests as I try learning a bit with the challenge)
+- Github Actions for automated deployment into Github Pages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Start the Project
+### Open Project on localhost
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Clone the project into you local to run the app in the development server.
 
-### `npm test`
+First of all, you'll need to install all the required dependencies to be able to open the project correctly. Run the following command:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`npm install`
 
-### `npm run build`
+There is a **.env.example** file in the project. Copy this one the make it a **.env** file to put your API_KEY_SECRET
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The API used to collect all the data is: [football-data.org API](football-data.org)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You can start the server into your localhost with the following command:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`npm start`
 
-### `npm run eject`
+This will open localhost:3000
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Web App Page
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+On `.github/Workflows/deploy.yml`there is the Github Action to automate the deploy process of the React Web App into Github Pages.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The link to the site is the following one:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+(Adidas Fifa Challenge)[https://yaimsc.github.io/fifa-challenge/]
 
-## Learn More
+### Launch the test runner
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+For launching the test and watch that everything is okay, run the following command:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`npm test`
 
-### Code Splitting
+#### Known Bugs
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+When you are selecting players:
+ - You need to add one more as usual, as the setter of array append goes with 1 select delay.
+  Haven't found a solution quick enough & decided to move on to finish the project correctly.
+  On `src > components > SelectTeamPlayers.js > addPlayer()` is the code to see how I am doing the process.
+Tests:
+- `Finalteam.test.js`is not the correct test as it involves localStorage process and was more complex. I just strated today with tests & try the basic ones.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
