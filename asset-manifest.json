@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/fifa-challenge/static/css/main.72958d62.chunk.css",
-    "main.js": "/fifa-challenge/static/js/main.fa1ab396.chunk.js",
-    "main.js.map": "/fifa-challenge/static/js/main.fa1ab396.chunk.js.map",
-    "runtime-main.js": "/fifa-challenge/static/js/runtime-main.8b8d4945.js",
-    "runtime-main.js.map": "/fifa-challenge/static/js/runtime-main.8b8d4945.js.map",
-    "static/js/2.aed2d70e.chunk.js": "/fifa-challenge/static/js/2.aed2d70e.chunk.js",
-    "static/js/2.aed2d70e.chunk.js.map": "/fifa-challenge/static/js/2.aed2d70e.chunk.js.map",
-    "static/js/3.eff24132.chunk.js": "/fifa-challenge/static/js/3.eff24132.chunk.js",
-    "static/js/3.eff24132.chunk.js.map": "/fifa-challenge/static/js/3.eff24132.chunk.js.map",
-    "index.html": "/fifa-challenge/index.html",
-    "static/css/main.72958d62.chunk.css.map": "/fifa-challenge/static/css/main.72958d62.chunk.css.map",
-    "static/js/2.aed2d70e.chunk.js.LICENSE.txt": "/fifa-challenge/static/js/2.aed2d70e.chunk.js.LICENSE.txt",
-    "static/media/adidas_logo.1dc7c692.png": "/fifa-challenge/static/media/adidas_logo.1dc7c692.png",
-    "static/media/styles.scss": "/fifa-challenge/static/media/texgyreadventor-regular-webfont.7f83f775.woff"
+    "main.css": "/static/css/main.417351f8.chunk.css",
+    "main.js": "/static/js/main.eb7e3a6d.chunk.js",
+    "main.js.map": "/static/js/main.eb7e3a6d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.5baa1bc4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.5baa1bc4.js.map",
+    "static/js/2.aed2d70e.chunk.js": "/static/js/2.aed2d70e.chunk.js",
+    "static/js/2.aed2d70e.chunk.js.map": "/static/js/2.aed2d70e.chunk.js.map",
+    "static/js/3.eff24132.chunk.js": "/static/js/3.eff24132.chunk.js",
+    "static/js/3.eff24132.chunk.js.map": "/static/js/3.eff24132.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.417351f8.chunk.css.map": "/static/css/main.417351f8.chunk.css.map",
+    "static/js/2.aed2d70e.chunk.js.LICENSE.txt": "/static/js/2.aed2d70e.chunk.js.LICENSE.txt",
+    "static/media/adidas_logo.1dc7c692.png": "/static/media/adidas_logo.1dc7c692.png",
+    "static/media/styles.scss": "/static/media/texgyreadventor-regular-webfont.7f83f775.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.8b8d4945.js",
+    "static/js/runtime-main.5baa1bc4.js",
     "static/js/2.aed2d70e.chunk.js",
-    "static/css/main.72958d62.chunk.css",
-    "static/js/main.fa1ab396.chunk.js"
+    "static/css/main.417351f8.chunk.css",
+    "static/js/main.eb7e3a6d.chunk.js"
   ]
 }
