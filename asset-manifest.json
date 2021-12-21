@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "https://yaimsc.github.io/fifa-challenge/static/css/main.7af3ebe8.chunk.css",
-    "main.js": "https://yaimsc.github.io/fifa-challenge/static/js/main.3a4c776b.chunk.js",
-    "main.js.map": "https://yaimsc.github.io/fifa-challenge/static/js/main.3a4c776b.chunk.js.map",
+    "main.js": "https://yaimsc.github.io/fifa-challenge/static/js/main.fb6cd97c.chunk.js",
+    "main.js.map": "https://yaimsc.github.io/fifa-challenge/static/js/main.fb6cd97c.chunk.js.map",
     "runtime-main.js": "https://yaimsc.github.io/fifa-challenge/static/js/runtime-main.b189fe76.js",
     "runtime-main.js.map": "https://yaimsc.github.io/fifa-challenge/static/js/runtime-main.b189fe76.js.map",
     "static/js/2.3ff6dfec.chunk.js": "https://yaimsc.github.io/fifa-challenge/static/js/2.3ff6dfec.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.b189fe76.js",
     "static/js/2.3ff6dfec.chunk.js",
     "static/css/main.7af3ebe8.chunk.css",
-    "static/js/main.3a4c776b.chunk.js"
+    "static/js/main.fb6cd97c.chunk.js"
   ]
 }
