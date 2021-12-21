@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "https://yaimsc.github.io/fifa-challenge/static/css/main.7af3ebe8.chunk.css",
+    "main.css": "https://yaimsc.github.io/fifa-challenge/static/css/main.eb2d06b6.chunk.css",
     "main.js": "https://yaimsc.github.io/fifa-challenge/static/js/main.1b3ad59f.chunk.js",
     "main.js.map": "https://yaimsc.github.io/fifa-challenge/static/js/main.1b3ad59f.chunk.js.map",
     "runtime-main.js": "https://yaimsc.github.io/fifa-challenge/static/js/runtime-main.b189fe76.js",
@@ -10,7 +10,7 @@
     "static/js/3.eff24132.chunk.js": "https://yaimsc.github.io/fifa-challenge/static/js/3.eff24132.chunk.js",
     "static/js/3.eff24132.chunk.js.map": "https://yaimsc.github.io/fifa-challenge/static/js/3.eff24132.chunk.js.map",
     "index.html": "https://yaimsc.github.io/fifa-challenge/index.html",
-    "static/css/main.7af3ebe8.chunk.css.map": "https://yaimsc.github.io/fifa-challenge/static/css/main.7af3ebe8.chunk.css.map",
+    "static/css/main.eb2d06b6.chunk.css.map": "https://yaimsc.github.io/fifa-challenge/static/css/main.eb2d06b6.chunk.css.map",
     "static/js/2.3ff6dfec.chunk.js.LICENSE.txt": "https://yaimsc.github.io/fifa-challenge/static/js/2.3ff6dfec.chunk.js.LICENSE.txt",
     "static/media/adidas_logo.1dc7c692.png": "https://yaimsc.github.io/fifa-challenge/static/media/adidas_logo.1dc7c692.png",
     "static/media/styles.scss": "https://yaimsc.github.io/fifa-challenge/static/media/texgyreadventor-regular-webfont.7f83f775.woff"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.b189fe76.js",
     "static/js/2.3ff6dfec.chunk.js",
-    "static/css/main.7af3ebe8.chunk.css",
+    "static/css/main.eb2d06b6.chunk.css",
     "static/js/main.1b3ad59f.chunk.js"
   ]
 }
