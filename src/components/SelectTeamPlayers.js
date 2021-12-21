@@ -70,6 +70,7 @@ const SelectTeamPlayers = () => {
   };
 
   const showSelectedPlayers = (ownTeam) => {
+    localStorage.setItem("yourTeam", JSON.stringify(ownTeam));
     return (
       <div>
         <p>Total: {ownTeam.length}</p>
