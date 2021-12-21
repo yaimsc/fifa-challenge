@@ -42,6 +42,8 @@ The link to the site is the following one:
 
 (Adidas Fifa Challenge)[https://yaimsc.github.io/fifa-challenge/]
 
+If you have any trouble with the link and something is not correclty or the page is blank, don't hesitate on contacting me. 
+
 Aswell you can deploy the content with:
 
 `npm run deploy`
