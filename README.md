@@ -2,6 +2,8 @@
 
 This is a Frontend ReactJS Web Application project by Yaiza Muñoz.
 
+Thank you for giving me this opportunity!
+
 ## Technologies & Libraries used
 
 For the project I have used:
