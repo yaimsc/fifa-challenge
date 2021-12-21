@@ -5,70 +5,44 @@ This is a Frontend ReactJS Web Application project by Yaiza Muñoz.
 ## Technologies & Libraries used
 
 For the project I have used:
-- React with Hooks & Functiional Components
-- React Router for navigation
+- React with Hooks & Functional Components
+- React Router for navigation to show final selection
+- LocalStorage for browser data persistency
 - For styling & Components: SASS & Material UI
-- React Testing Library for tests
+- For cleaning code & code formatting: ESlint & Prettier
+- React Testing Library for tests (basic tests as I try learning a bit with the challenge)
+- Github Actions for automated deployment into Github Pages
 
-### `npm start`
+### Open Project on localhost
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Clone the project into you local to run the app in the development server.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+First of all, you'll need to install all the required dependencies to be able to open the project correctly. Run the following command:
 
-### `npm test`
+`npm install`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+There is a **.env.example** file in the project. Copy this one the make it a **.env** file to put your API_KEY_SECRET
 
-### `npm run build`
+The API used to collect all the data is: [football-data.org API](football-data.org)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You can start the server into your localhost with the following command:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`npm start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This will open localhost:3000
 
-### `npm run eject`
+### Launch the test runner
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+For launching the test and watch that everything is okay, run the following command:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`npm test`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Known Bugs
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+When you are selecting players:
+ - You need to add one more as usual, as the setter of array append goes with 1 select delay.
+  Haven't found a solution quick enough & decided to move on to finish the project correctly.
+  On `src > components > SelectTeamPlayers.js > addPlayer()` is the code to see how I am doing the process.
+Tests:
+- `Finalteam.test.js`is not the correct test as it involves localStorage process and was more complex. I just strated today with tests & try the basic ones.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

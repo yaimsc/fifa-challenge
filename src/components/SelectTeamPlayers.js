@@ -14,7 +14,7 @@ const SelectTeamPlayers = () => {
     fetch("https://api.football-data.org/v2/competitions/WC/teams", {
       method: "GET",
       headers: {
-        "X-Auth-Token": "842eabacaca542ec9ed31f058efc2115",
+        "X-Auth-Token": `${process.env.REACT_APP_API_KEY}`,
       },
     })
       .then((response) => response.json())
@@ -32,7 +32,7 @@ const SelectTeamPlayers = () => {
       fetch(`https://api.football-data.org/v2/teams/${selected}`, {
         method: "GET",
         headers: {
-          "X-Auth-Token": "842eabacaca542ec9ed31f058efc2115",
+          "X-Auth-Token": `${process.env.REACT_APP_API_KEY}`,
         },
       })
         .then((response) => response.json())
@@ -50,7 +50,7 @@ const SelectTeamPlayers = () => {
   };
 
   /*
-  * Add player function sets pleyer selected with a delay
+  * Add player function sets pleyer selection with 1 of delay
   * haven't found a fix soon enough and had to move on to the next task
   */
 
