@@ -42,7 +42,7 @@ const SelectTeamPlayers = () => {
   }, [selected]);
 
   useEffect(() => {
-    setOwnTeam(JSON.parse(localStorage.getItem('yourTeam')))
+    if(JSON.parse(localStorage.getItem('yourTeam')) !== null) setOwnTeam(JSON.parse(localStorage.getItem('yourTeam')))
   }, [])
 
   const handlePlayerChange = (event) => {
