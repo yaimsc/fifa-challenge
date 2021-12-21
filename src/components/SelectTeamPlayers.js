@@ -42,7 +42,7 @@ const SelectTeamPlayers = () => {
   }, [selected]);
 
   useEffect(() => {
-    setOwnTeam(JSON.parse(localStorage.getItem('yourTeam')))
+    if(JSON.parse(localStorage.getItem('yourTeam')) !== null) setOwnTeam(JSON.parse(localStorage.getItem('yourTeam')))
   }, [])
 
   const handlePlayerChange = (event) => {
@@ -74,9 +74,10 @@ const SelectTeamPlayers = () => {
   };
 
   const showSelectedPlayers = (ownTeam) => {
+    console.log(ownTeam)
     return (
       <div>
-        <p>Total: {ownTeam.length}</p>
+        <p>Total: {ownTeam === null ? 0 : ownTeam.length}</p>
         <Stack
           direction="column"
           spacing={1}
