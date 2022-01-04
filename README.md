@@ -40,7 +40,7 @@ On `.github/Workflows/deploy.yml`there is the Github Action to automate the depl
 
 The link to the site is the following one:
 
-(Adidas Fifa Challenge)[https://yaimsc.github.io/fifa-challenge/]
+[Adidas Fifa Challenge](https://yaimsc.github.io/fifa-challenge/)
 
 If you have any trouble with the link and something is not correclty or the page is blank, don't hesitate on contacting me.
 
